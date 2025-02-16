@@ -54,6 +54,14 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
+@media screen and (max-width: 500px) {
+  .app {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+  :root {
+    --padding: 25px;
+  }
+}
 
 /* PREVIEW */
 
@@ -65,6 +73,7 @@ p {
   align-items: start;
   position: relative;
   cursor: pointer;
+  user-select: none;
 }
 
 .btn-wrapper {
@@ -114,6 +123,7 @@ p {
   flex-wrap: wrap;
   gap: 15px;
   cursor: pointer;
+  user-select: none;
 }
 .hex-grid .color {
   min-width: 33%;
@@ -128,4 +138,10 @@ p {
 .hex-grid .color p {
   color: white;
   mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 500px) {
+  .hex-grid {
+    aspect-ratio: 1;
+  }
 }
